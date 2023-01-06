@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="119px" height="27px" viewBox="0 0 119 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Marshmello_landing-page">
+        <g transform="matrix(0.0965704,0,0,0.0943653,-89.4472,-69.7679)">
+            <g transform="matrix(0.523363,0,0,0.523363,591.356,583.349)">
+                <circle cx="908.666" cy="571.889" r="262.729" style="fill:white;stroke:black;stroke-width:16px;"/>
+            </g>
+            <g transform="matrix(0.523363,0,0,0.523363,564.49,600.039)">
+                <path d="M697.271,540L1222.73,540" style="fill:none;stroke:black;stroke-width:16px;"/>
+            </g>
+            <g transform="matrix(0.523363,0,0,0.523363,637.531,477.995)">
+                <path d="M820.44,510.463L999.685,962.199" style="fill:none;stroke:black;stroke-width:16px;"/>
+            </g>
+            <g transform="matrix(0.523363,0,0,0.523363,637.531,477.995)">
+                <path d="M820.44,510.463L640.153,962.199" style="fill:none;stroke:black;stroke-width:16px;"/>
+            </g>
+            <g transform="matrix(0.523363,0,0,0.523363,573.87,635.535)">
+                <circle cx="1125.32" cy="471.803" r="43.475" style="fill:white;stroke:black;stroke-width:16px;"/>
+            </g>
+            <g transform="matrix(0.523363,0,0,0.523363,560.574,600.039)">
+                <path d="M779.714,496.152C779.714,496.152 815.209,497.815 815.209,539.247C815.209,580.678 779.299,582.756 779.299,582.756C767.941,583.205 752.707,583.102 752.707,583.102L754.459,496.152L779.714,496.152Z" style="fill:white;stroke:black;stroke-width:16px;"/>
+            </g>
+            <g transform="matrix(0.960193,0.365204,-0.365204,0.960193,539.817,-287.677)">
+                <g transform="matrix(0.453792,0,0,0.453792,583.301,622.706)">
+                    <path d="M664.078,277.271C704.692,277.271 737.665,310.244 737.665,350.858C737.665,391.472 704.692,424.445 664.078,424.445" style="fill:white;fill-opacity:0;stroke:black;stroke-width:18.45px;"/>
+                </g>
+                <g transform="matrix(-0.453792,0,0,0.453792,1186.01,689.492)">
+                    <path d="M664.078,277.271C704.692,277.271 737.665,310.244 737.665,350.858C737.665,391.472 704.692,425.664 664.078,425.664" style="fill:white;fill-opacity:0;stroke:black;stroke-width:18.45px;"/>
+                </g>
+                <g transform="matrix(0.453792,0,0,0.453792,583.301,756.832)">
+                    <path d="M664.078,277.271C704.692,277.271 737.665,310.244 737.665,350.858C737.665,391.472 704.692,424.445 664.078,424.445" style="fill:white;fill-opacity:0;stroke:black;stroke-width:18.45px;"/>
+                </g>
+                <g transform="matrix(-0.453792,0,0,0.453792,1186.01,823.618)">
+                    <path d="M664.078,277.271C704.692,277.271 737.665,310.244 737.665,350.858C737.665,391.472 704.692,424.445 664.078,424.445" style="fill:white;fill-opacity:0;stroke:black;stroke-width:18.45px;"/>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,5.01562,3.92253)">
+            <text x="32.945px" y="16.498px" style="font-family:'DINAlternate-Bold', 'DIN Alternate', sans-serif;font-weight:700;font-size:20px;">S<tspan x="44.819px 50.776px 61.176px 67.133px 77.533px 83.089px 93.489px 103.488px " y="16.498px 16.498px 16.498px 16.498px 16.498px 16.498px 16.498px 16.498px ">tateless</tspan></text>
+        </g>
+    </g>
+</svg>

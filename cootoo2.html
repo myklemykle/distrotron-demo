@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Coötoo by Stateless Art</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/css/owl.theme.default.css">
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="vendors/aos/css/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+  <header id="header-section">
+  </header>
+  <div class="content-wrapper">
+  <div class="container">
+  <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+              <img src="images/Stateless2.svg" alt=""> 
+            </div>
+          </div>
+					<div class="grid-margin d-flex justify-content-center">
+						<div class="features-width">
+							<p class="near-connected text-muted d-none">Connected as <span id="accountName"></span></p>
+							<p class="near-disconnected text-muted">Connect your wallet to continue</p>
+						</div>
+					</div>
+					<div class="grid-margin d-flex justify-content-end">
+						<div class="features-width">
+							<button class="near-connected btn btn-dark d-none" data-toggle="modal" data-target="#exampleModal">Disconnect Wallet</button>
+							<button class="near-disconnected btn btn-dark" data-toggle="modal" data-target="#exampleModal">Connect Wallet</button>
+						</div>
+					</div>
+  </div>
+  </div>
+  </div>
+  <section class="features-overview" id="features-section" >
+  <div class="banner2" >
+    <div class="container">
+	    <img src="images/cootoo-logo-sm.svg" alt="" class="img-fluid">
+	        </div>
+  </div>
+  </section>
+
+  
+  
+    <div class="content-wrapper">
+    <div class="container">
+	    
+	    <section class="features-overview" id="features-section" >
+        <div class="content-header2">
+          <h2>Distribution Contract Demo</h2>
+          <h6 class="section-subtitle text-muted">Distribute funds to all the authorized minters in a Mintbase store.</h6>
+        </div>
+        <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+              <h5 class="py-3"></h5>
+              <p class="text-muted"></p> 
+            </div>
+          </div>
+          <div class="grid-margin  justify-content-center">
+            <div class="features-width">
+              
+              <!-- minter contract form -->
+						<form id="minter-form" class="my-5">
+							<fieldset>
+								<hr>
+								<div class="mb-3">
+									<label for="minter-contract" class="form-label">Mintbase testnet contract address:</label>
+									<!-- todo: form validation for NEAR account names -->
+									<input type="text" class="form-control" id="minter-contract" aria-describedby="minter-help" required="">
+									<div id="minter-help" class="form-text">Enter the contract with the list of minters to pay.</div>
+								</div>
+								<button type="submit" class="btn btn-outline-dark">Check</button>
+							</fieldset>
+						</form>
+						<!-- report area -->
+						<div id="minter-report">
+							<div class="alert alert-success d-none" role="alert"></div>
+							<div class="alert alert-warning d-none" role="alert"></div>
+							<!-- test: contract exists, has a minters list that is not empty -->
+							<!-- test: all minters in the list exist? -->
+						</div>
+						<!-- payment form -->
+						<form id="payment-form" class="my-5">
+							<fieldset disabled="">
+								 
+								<div class="mb-3">
+									<label for="total-payment" class="form-label">Total Ⓝ to distibute:</label>
+									<!-- todo: form validation for NEAR amounts -->
+									<!-- todo: form validation: don't exceed wallet contents -->
+									<input type="number" min="0.000000000001" class="form-control" id="total-payment" aria-describedby="payment-help" required="">
+									<div id="payment-help" class="form-text">Enter an amount to divide equally between the minters.</div>
+								</div>
+								<button type="submit" class="btn btn-outline-dark">Pay</button>
+								<hr>
+							</fieldset>
+						</form>
+						<!-- report area -->
+						<div id="payment-report">
+							<div class="alert alert-success d-none" role="alert"></div>
+							<div class="alert alert-warning d-none" role="alert"></div>
+							<!-- report: any complications? -->
+							<!-- report: how much paid to each minter -->
+							<!-- report: total gas cost -->
+						</div>
+			<!-- end minter contract form -->
+              
+                          
+            </div>
+          </div>
+          <div class="grid-margin d-flex justify-content-end">
+            <div class="features-width">
+              <h5 class="py-3"></h5>
+              <p class="text-muted"></p>
+            </div>
+          </div>
+        </div>
+      </section>    
+      
+      <section class="case-studies" id="case-studies-section">
+        <div class="row grid-margin">
+          <div class="col-12 text-center pb-5">
+            <h2>Install a tip button</h2>
+              <h6 class="section-subtitle text-muted">Customise it for your Mintbase store and add to your website. <br>Get the <a href="https://github.com/myklemykle/stateless">source code</a>.</h6>
+          </div>
+            
+          <div class="col-12 col-md-6 col-lg-3 stretch-card2">
+            <div class="card color-cards">
+              <div class="card-body p-0">
+                <div class="bg-medium text-center card-contents">
+                  <div class="card-image">
+                     <!-- start tip button form -->  
+            <h6>Tip all minters at</h6>
+            <h2>myteststore</h2>
+            <h6>.mintbase1.near</h6>
+           
+	            <form id="tip-button">
+		            <fieldset>
+			           <button type="submit" value="1" id="total-payment" class="btn btn-outline-dark">Tip 1Ⓝ</button> 
+
+		            </fieldset>		            
+            	</form>
+            
+						<!-- report area -->
+						<div id="payment-report">
+							<div class="alert alert-success d-none" role="alert"></div>
+							<div class="alert alert-warning d-none" role="alert"></div>
+							<!-- report: any complications? -->
+							<!-- report: how much paid to each minter -->
+							<!-- report: total gas cost -->
+						</div>
+						<p class="text-muted">&nbsp;<br>&nbsp;<br>Connected as tester.testnet</p>
+						<button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">(Dis)Connect Wallet</button>
+            <!-- end tip button form -->  
+                  </div>  
+                  
+                  </div>   
+                <div class="card-details text-center pt-4">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!- end card>
+          <div class="col-12 col-md-6 col-lg-3 stretch-card2">
+            <div class="card color-cards">
+              <div class="card-body p-0">
+                <div class="bg-medium text-center card-contents">
+                  <div class="card-image">
+                     <!-- start tip button form -->  
+            <h6>Tip all minters at</h6>
+            <h2>myteststore</h2>
+            <h6>.mintbase1.near</h6>
+           
+	            <form id="tip-button">
+		            <fieldset>
+			         
+			           <button type="submit" value="5" id="total-payment" class="btn btn-outline-dark">Tip 5Ⓝ</button> 
+			           
+		            </fieldset>		            
+            	</form>
+            
+						<!-- report area -->
+						<div id="payment-report">
+							<div class="alert alert-success d-none" role="alert"></div>
+							<div class="alert alert-warning d-none" role="alert"></div>
+							<!-- report: any complications? -->
+							<!-- report: how much paid to each minter -->
+							<!-- report: total gas cost -->
+						</div>
+						<p class="text-muted">&nbsp;<br>&nbsp;<br>Connected as tester.testnet</p>
+						<button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">(Dis)Connect Wallet</button>
+            <!-- end tip button form -->  
+                  </div>  
+                  
+                  </div>   
+                <div class="card-details text-center pt-4">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!- end card>
+          <div class="col-12 col-md-6 col-lg-3 stretch-card2">
+            <div class="card color-cards">
+              <div class="card-body p-0">
+                <div class="bg-medium text-center card-contents">
+                  <div class="card-image">
+                     <!-- start tip button form -->  
+            <h6>Tip all minters at</h6>
+            <h2>myteststore</h2>
+            <h6>.mintbase1.near</h6>
+           
+	            <form id="tip-button">
+		            <fieldset>
+			           <button type="submit" value="10" id="total-payment" class="btn btn-outline-dark">Tip 10Ⓝ</button> 
+			           
+
+		            </fieldset>		            
+            	</form>
+            
+						<!-- report area -->
+						<div id="payment-report">
+							<div class="alert alert-success d-none" role="alert"></div>
+							<div class="alert alert-warning d-none" role="alert"></div>
+							<!-- report: any complications? -->
+							<!-- report: how much paid to each minter -->
+							<!-- report: total gas cost -->
+						</div>
+						<p class="text-muted">&nbsp;<br>&nbsp;<br>Connected as tester.testnet</p>
+						<button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">(Dis)Connect Wallet</button>
+            <!-- end tip button form -->  
+                  </div>  
+                  
+                  </div>   
+                <div class="card-details text-center pt-4">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!- end card>
+          <div class="col-12 col-md-6 col-lg-3 stretch-card2">
+            <div class="card color-cards">
+              <div class="card-body p-0">
+                <div class="bg-medium text-center card-contents">
+                  <div class="card-image">
+                     <!-- start tip button form -->  
+            <h6>Tip all minters at</h6>
+            <h2>myteststore</h2>
+            <h6>.mintbase1.near</h6>
+           
+	            <form id="tip-button">
+		            <fieldset>
+			       <input type="number" min="0.000000000001" id="total-payment" aria-describedby="payment-help" required=""  size="50%"> <button type="submit" value="10" id="total-payment" class="btn btn-outline-dark">Tip Custom</button> 
+
+		            </fieldset>		            
+            	</form>
+            
+						<!-- report area -->
+						<div id="payment-report">
+							<div class="alert alert-success d-none" role="alert"></div>
+							<div class="alert alert-warning d-none" role="alert"></div>
+							<!-- report: any complications? -->
+							<!-- report: how much paid to each minter -->
+							<!-- report: total gas cost -->
+						</div>
+						<p class="text-muted">&nbsp;<br>Connected as tester.testnet</p>
+						<button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">(Dis)Connect Wallet</button>
+            <!-- end tip button form -->  
+                  </div>  
+                  
+                  </div>   
+                <div class="card-details text-center pt-4">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!- end card>
+        </div>
+      </section>    
+
+
+
+        <section class="features-overview" id="features-section" >
+        <div class="content-header3">
+
+	        
+          <h2>Why a Distribution Contract?</h2>
+          <h6 class="section-subtitle text-muted">Mintbase stores often evolve to become their own little ecosystem, <br>a group of people brought together around a project, a cause or an idea, <br>and this is reflected on chain as the list of authorized minters.</h6>
+        </div>
+        <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+              <img src="images/stateless117.svg" alt="" class="img-icons">
+              <h5 class="py-3">Support<br>Minters</h5>
+              <p class="text-muted">One way to reward and support all the minters at once is to distribute an amount of money equally between them, and this is what our contract does.</p>
+            </div>
+          </div>
+          <div class="grid-margin d-flex justify-content-center">
+            <div class="features-width">
+              <img src="images/stateless118.svg" alt="" class="img-icons">
+              <h5 class="py-3">Tips &<br>Cooperatives</h5>
+              <p class="text-muted">What can you use it for?
+Tip at once all the current minters in a store! 
+Distribute funds received by an artist cooperative.  
+Share revenues coming from sources other than NFT splits!  </p>
+            </div>
+          </div>
+          <div class="grid-margin d-flex justify-content-end">
+            <div class="features-width">
+              <img src="images/stateless116.svg" alt="" class="img-icons">
+              <h5 class="py-3">Dynamic<br>Rewards</h5>
+              <p class="text-muted">A group of authorized minters can be continuosly updated. This allows for flexibility, unlike NFT splits which remain always the same for the life of the token. </p>
+            </div>
+          </div>
+        </div>
+      </section>    
+	    
+                 
+                 
+         </div>
+ 
+ 
+ 
+      <section class="customer-feedback" id="feedback-section">
+        <div class="row">
+          <div class="col-12 text-center pb-5">
+            <h2>open source coop protocol</h2>
+            <h6 class="section-subtitle text-muted m-0">Coming soon.</h6>
+       
+       </div></div>
+       </section>     
+              <div class="banner" >
+    <div class="container">
+           
+             <img src="images/distribution171.svg" alt="" class="img-fluid">
+          </div>
+       
+              </div>
+
+
+      <footer class="border-top">
+        <p class="text-center text-muted pt-4">StatelessDAO <a href="https://www.statelessart.org/" class="px-1">statelessart.org</a>
+        </p>
+      </footer>
+      <!-- Modal for Contact - us Button -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="exampleModalLabel">Contact Us</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="Name">Name</label>
+                  <input type="text" class="form-control" id="Name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="Email">Email</label>
+                  <input type="email" class="form-control" id="Email-1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="Message">Message</label>
+                  <textarea class="form-control" id="Message" placeholder="Enter your Message"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <script src="vendors/jquery/jquery.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="vendors/aos/js/aos.js"></script>
+  <script src="js/landingpage.js"></script>
+  <script src="js/distrodemo.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/near-api-js@1.1.0/dist/near-api-js.min.js"></script>
+</body>
+</html>

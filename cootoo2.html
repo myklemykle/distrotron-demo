@@ -67,51 +67,58 @@
 						<div class="grid-margin  justify-content-center">
 							<div class="features-width">
 								
-								<!-- minter contract form -->
-							<form id="minter-form" class="my-5">
-								<fieldset>
-									<hr>
-									<div class="mb-3">
-										<label for="minter-contract" class="form-label">Mintbase testnet contract address:</label>
-										<!-- todo: form validation for NEAR account names -->
-										<input type="text" class="form-control" id="minter-contract" aria-describedby="minter-help" required="">
-										<div id="minter-help" class="form-text">Enter the contract with the list of minters to pay.</div>
+									<!-- minter contract form -->
+								<form id="minter-form" class="my-5">
+									<fieldset>
+										<hr>
+										<div class="mb-3">
+											<label for="minter-contract" class="form-label">Mintbase testnet contract address:</label>
+											<!-- todo: form validation for NEAR account names -->
+											<input type="text" class="form-control" id="minter-contract" aria-describedby="minter-help" required="">
+											<div id="minter-help" class="form-text">Enter the contract with the list of minters to pay.</div>
+										</div>
+										<button type="submit" class="btn btn-outline-dark">Check</button>
+									</fieldset>
+								</form>
+								<!-- report area -->
+								<div id="minter-report">
+									<div class="alert alert-success d-none" role="alert"></div>
+									<div class="alert alert-warning d-none" role="alert"></div>
+									<!-- test: contract exists, has a minters list that is not empty -->
+									<!-- test: all minters in the list exist? -->
+								</div>
+								<!-- payment form -->
+								<form id="payment-form" class="my-5 distrotron-contract-found d-none">
+									<fieldset disabled="">
+										 
+										<div class="mb-3">
+											<label for="total-payment" class="form-label">Total Ⓝ to distibute:</label>
+											<!-- todo: form validation for NEAR amounts -->
+											<!-- todo: form validation: don't exceed wallet contents -->
+											<input type="number" min="0.000000000001" class="form-control" id="total-payment" aria-describedby="payment-help" required="">
+											<div id="payment-help" class="form-text">Enter an amount to divide equally between the minters.</div>
+										</div>
+										<button type="submit" class="btn btn-outline-dark">Pay</button>
+										<hr>
+									</fieldset>
+									<!-- report area -->
+									<div id="main-payment-report" class="payment-report">
+										<div class="alert alert-success d-none" role="alert"></div>
+										<div class="alert alert-warning d-none" role="alert"></div>
+										<!-- report: any complications? -->
+										<!-- report: how much paid to each minter -->
+										<!-- report: total gas cost -->
 									</div>
-									<button type="submit" class="btn btn-outline-dark">Check</button>
-								</fieldset>
-							</form>
-							<!-- report area -->
-							<div id="minter-report">
-								<div class="alert alert-success d-none" role="alert"></div>
-								<div class="alert alert-warning d-none" role="alert"></div>
-								<!-- test: contract exists, has a minters list that is not empty -->
-								<!-- test: all minters in the list exist? -->
-							</div>
-							<!-- payment form -->
-							<form id="payment-form" class="my-5 d-none">
-								<fieldset disabled="">
-									 
-									<div class="mb-3">
-										<label for="total-payment" class="form-label">Total Ⓝ to distibute:</label>
-										<!-- todo: form validation for NEAR amounts -->
-										<!-- todo: form validation: don't exceed wallet contents -->
-										<input type="number" min="0.000000000001" class="form-control" id="total-payment" aria-describedby="payment-help" required="">
-										<div id="payment-help" class="form-text">Enter an amount to divide equally between the minters.</div>
-									</div>
-									<button type="submit" class="btn btn-outline-dark">Pay</button>
-									<hr>
-								</fieldset>
-							</form>
-							<!-- report area -->
-							<div id="payment-report">
-								<div class="alert alert-success d-none" role="alert"></div>
-								<div class="alert alert-warning d-none" role="alert"></div>
-								<!-- report: any complications? -->
-								<!-- report: how much paid to each minter -->
-								<!-- report: total gas cost -->
-							</div>
-				<!-- end minter contract form -->
-								
+								</form>
+								<div id="tx-success" class="d-none">
+									<hr/>
+									<h2>Transaction Successful!</h2>
+									<a id="tx-hash-btn" class="btn btn-outline-success">View Transaction Details</a>
+									<button id="start-over-btn" type="button" class="btn btn-outline-dark">Make Another Payment</button>
+								</div>
+
+					<!-- end minter contract form -->
+									
 														
 							</div>
 						</div>
@@ -126,12 +133,14 @@
 				</div><!-- near-connected -->
 			</section>    
 			
-			<section class="case-studies" id="case-studies-section">
+			<section class="case-studies distrotron-contract-found d-none" id="case-studies-section">
 				<div class="near-connected d-none"> 
 					<div class="row grid-margin">
 						<div class="col-12 text-center pb-5">
 							<h2>Install a tip button</h2>
-								<h6 class="section-subtitle text-muted">Customise it for your Mintbase store and add to your website. <br>Get the <a href="https://github.com/myklemykle/stateless">source code</a>.</h6>
+							<h6 class="section-subtitle text-muted">Customise it for your Mintbase store and add to your website. 
+								<!-- <br/>Get the <a href="https://github.com/myklemykle/stateless">source code</a>. -->
+							</h6>
 						</div>
 							
 						<div class="col-12 col-md-6 col-lg-3 stretch-card2">
@@ -141,24 +150,24 @@
 										<div class="card-image">
 											 <!-- start tip button form -->  
 							<h6>Tip all minters at</h6>
-							<h2>myteststore</h2>
-							<h6>.mintbase1.near</h6>
+							<h2 class="distrotron-contract-firstname">myteststore</h2>
+							<h6 class="distrotron-contract-restname">.mintbase1.near</h6>
 						 
-								<form id="tip-button">
+								<form id="tip-button" class="tip-button">
 									<fieldset>
-									 <button type="submit" value="1" id="total-payment" class="btn btn-outline-dark">Tip 1Ⓝ</button> 
+									 <button type="submit" value="1" class="tip-amount btn btn-outline-dark">Tip 1Ⓝ</button> 
 
 									</fieldset>		            
-								</form>
 							
-							<!-- report area -->
-							<div id="payment-report">
-								<div class="alert alert-success d-none" role="alert"></div>
-								<div class="alert alert-warning d-none" role="alert"></div>
-								<!-- report: any complications? -->
-								<!-- report: how much paid to each minter -->
-								<!-- report: total gas cost -->
-							</div>
+									<!-- report area -->
+									<div class="payment-report">
+										<div class="alert alert-success d-none" role="alert"></div>
+										<div class="alert alert-warning d-none" role="alert"></div>
+										<!-- report: any complications? -->
+										<!-- report: how much paid to each minter -->
+										<!-- report: total gas cost -->
+									</div>
+								</form>
 							<p class="text-muted near-connected">&nbsp;<br>&nbsp;<br>Connected as <span class="accountName"></span></p>
 							<button class="near-connected btn btn-dark d-none" data-toggle="modal" onclick="utils.signOut()">Disconnect Wallet</button>
 							<button class="near-disconnected btn btn-dark" data-toggle="modal" onclick="utils.signIn()">Connect Wallet</button>
@@ -179,25 +188,25 @@
 										<div class="card-image">
 											 <!-- start tip button form -->  
 							<h6>Tip all minters at</h6>
-							<h2>myteststore</h2>
-							<h6>.mintbase1.near</h6>
+							<h2 class="distrotron-contract-firstname">myteststore</h2>
+							<h6 class="distrotron-contract-restname">.mintbase1.near</h6>
 						 
-								<form id="tip-button">
+								<form id="tip-button" class="tip-button">
 									<fieldset>
 								 
-									 <button type="submit" value="5" id="total-payment" class="btn btn-outline-dark">Tip 5Ⓝ</button> 
+									 <button type="submit" value="5" class="tip-amount btn btn-outline-dark">Tip 5Ⓝ</button> 
 									 
 									</fieldset>		            
-								</form>
 							
-							<!-- report area -->
-							<div id="payment-report">
-								<div class="alert alert-success d-none" role="alert"></div>
-								<div class="alert alert-warning d-none" role="alert"></div>
-								<!-- report: any complications? -->
-								<!-- report: how much paid to each minter -->
-								<!-- report: total gas cost -->
-							</div>
+									<!-- report area -->
+									<div class="payment-report">
+										<div class="alert alert-success d-none" role="alert"></div>
+										<div class="alert alert-warning d-none" role="alert"></div>
+										<!-- report: any complications? -->
+										<!-- report: how much paid to each minter -->
+										<!-- report: total gas cost -->
+									</div>
+								</form>
 							<p class="text-muted near-connected">&nbsp;<br>&nbsp;<br>Connected as <span class="accountName"></span></p>
 							<button class="near-connected btn btn-dark d-none" data-toggle="modal" onclick="utils.signOut()">Disconnect Wallet</button>
 							<button class="near-disconnected btn btn-dark" data-toggle="modal" onclick="utils.signIn()">Connect Wallet</button>
@@ -218,25 +227,24 @@
 										<div class="card-image">
 											 <!-- start tip button form -->  
 							<h6>Tip all minters at</h6>
-							<h2>myteststore</h2>
-							<h6>.mintbase1.near</h6>
+							<h2 class="distrotron-contract-firstname">myteststore</h2>
+							<h6 class="distrotron-contract-restname">.mintbase1.near</h6>
 						 
-								<form id="tip-button">
+								<form id="tip-button" class="tip-button">
 									<fieldset>
-									 <button type="submit" value="10" id="total-payment" class="btn btn-outline-dark">Tip 10Ⓝ</button> 
+									 <button type="submit" value="10" class="tip-amount btn btn-outline-dark">Tip 10Ⓝ</button> 
 									 
 
 									</fieldset>		            
+									<!-- report area -->
+									<div class="payment-report">
+										<div class="alert alert-success d-none" role="alert"></div>
+										<div class="alert alert-warning d-none" role="alert"></div>
+										<!-- report: any complications? -->
+										<!-- report: how much paid to each minter -->
+										<!-- report: total gas cost -->
+									</div>
 								</form>
-							
-							<!-- report area -->
-							<div id="payment-report">
-								<div class="alert alert-success d-none" role="alert"></div>
-								<div class="alert alert-warning d-none" role="alert"></div>
-								<!-- report: any complications? -->
-								<!-- report: how much paid to each minter -->
-								<!-- report: total gas cost -->
-							</div>
 							<p class="text-muted near-connected">&nbsp;<br>&nbsp;<br>Connected as <span class="accountName"></span></p>
 							<button class="near-connected btn btn-dark d-none" data-toggle="modal" onclick="utils.signOut()">Disconnect Wallet</button>
 							<button class="near-disconnected btn btn-dark" data-toggle="modal" onclick="utils.signIn()">Connect Wallet</button>
@@ -257,24 +265,24 @@
 										<div class="card-image">
 											 <!-- start tip button form -->  
 							<h6>Tip all minters at</h6>
-							<h2>myteststore</h2>
-							<h6>.mintbase1.near</h6>
+							<h2 class="distrotron-contract-firstname">myteststore</h2>
+							<h6 class="distrotron-contract-restname">.mintbase1.near</h6>
 						 
-								<form id="tip-button">
+								<form id="tip-button" class="tip-button">
 									<fieldset>
-							 <input type="number" min="0.000000000001" id="total-payment" aria-describedby="payment-help" required=""  size="50%"> <button type="submit" value="10" id="total-payment" class="btn btn-outline-dark">Tip Custom</button> 
+							 <input type="number" min="0.000000000001" aria-describedby="payment-help" required=""  size="50%" class="tip-amount"> <button type="submit" class="btn btn-outline-dark">Tip Custom</button> 
 
 									</fieldset>		            
-								</form>
 							
-							<!-- report area -->
-							<div id="payment-report">
-								<div class="alert alert-success d-none" role="alert"></div>
-								<div class="alert alert-warning d-none" role="alert"></div>
-								<!-- report: any complications? -->
-								<!-- report: how much paid to each minter -->
-								<!-- report: total gas cost -->
-							</div>
+									<!-- report area -->
+									<div class="payment-report">
+										<div class="alert alert-success d-none" role="alert"></div>
+										<div class="alert alert-warning d-none" role="alert"></div>
+										<!-- report: any complications? -->
+										<!-- report: how much paid to each minter -->
+										<!-- report: total gas cost -->
+									</div>
+								</form>
 							<p class="text-muted near-connected">&nbsp;<br>&nbsp;<br>Connected as <span class="accountName"></span></p>
 							<button class="near-connected btn btn-dark d-none" data-toggle="modal" onclick="utils.signOut()">Disconnect Wallet</button>
 							<button class="near-disconnected btn btn-dark" data-toggle="modal" onclick="utils.signIn()">Connect Wallet</button>

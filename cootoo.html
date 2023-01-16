@@ -100,7 +100,7 @@
 											<label for="total-payment" class="form-label">Total Ⓝ to distibute:</label>
 											<!-- todo: form validation for NEAR amounts -->
 											<!-- todo: form validation: don't exceed wallet contents -->
-											<input type="number" min="0.000000000001" class="form-control" id="total-payment" aria-describedby="payment-help" required="">
+											<input type="number" min="0.000000000001" step="0.000000000001" class="form-control" id="total-payment" aria-describedby="payment-help" required="">
 											<div id="payment-help" class="form-text">Enter an amount to divide equally between the minters.</div>
 										</div>
 										<button type="submit" class="btn btn-outline-dark">Pay</button>

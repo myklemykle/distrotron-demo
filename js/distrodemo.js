@@ -301,6 +301,13 @@ window.onload = async function() {
 				$(".otherNetworkIdLabel").html(window.distrotron_config.otherNetworkId);
 				$(".otherNetworkLink").attr('href', window.distrotron_config.otherNetworkURL);
 
+				if (typeof(window.distrotron_config.defaultMintbaseContractId) !== "undefined") { 
+					$("#minter-contract").val(window.distrotron_config.defaultMintbaseContractId);
+					let mbContractName = window.distrotron_config.defaultMintbaseContractId.split('.');
+					$(".distrotron-contract-firstname").html(mbContractName.shift());
+					$(".distrotron-contract-restname").html('.' + mbContractName.join('.'));
+				}
+
 				$("#minter-form").on("submit", submitMinterForm);
 				$("#payment-form").on("submit", submitPaymentForm);
 				$("form.tip-button").on("submit", submitTipButton);

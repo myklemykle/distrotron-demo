@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="vendors/aos/css/aos.css">
   <link rel="stylesheet" href="css/style.min.css">
 	<style>
-		// move to stylesheet
+		/* move to stylesheet */
 		.main-form-area {
 			max-width: 31em;
 		}
@@ -40,7 +40,7 @@
           </div>
 					<div class="grid-margin d-flex justify-content-center">
 						<div class="features-width">
-							<p class="near-connected text-muted d-none">Connected as <span class="accountName"></span></p>
+							<p class="near-connected text-muted d-none">Connected to <span class="networkIdLabel"></span> as <span class="accountName"></span></p>
 							<p class="near-disconnected text-muted">Connect your wallet to continue</p>
 						</div>
 					</div>
@@ -88,9 +88,9 @@
 									<fieldset>
 										<hr>
 										<div class="mb-3">
-											<label for="minter-contract" class="form-label">Mintbase testnet contract address:</label>
+											<label for="minter-contract" class="form-label">Mintbase <span class="networkIdLabel"></span> contract address:</label>
 											<!-- todo: form validation for NEAR account names -->
-											<input type="text" class="form-control" id="minter-contract" aria-describedby="minter-help" required="" value="cootest.mintspace2.testnet">
+											<input type="text" class="form-control" id="minter-contract" aria-describedby="minter-help" required="" value="50mint.mintbase1.near">
 											<div id="minter-help" class="form-text">Enter the contract with the list of minters to pay.</div>
 										</div>
 										<button type="submit" class="btn btn-outline-dark">Check</button>
@@ -152,7 +152,7 @@
 			<!-- <section class="case&#45;studies distrotron&#45;contract&#45;found d&#45;none" id="case&#45;studies&#45;section"> -->
 			<section class="case-studies distrotron-contract-found" id="case-studies-section">
 				<div class="near-connected d-none"> 
-					<div class="row grid-margin">
+					<div class="row xgrid-marginx">
 						<div class="col-12 text-center pb-5">
 							<h2>Install a tip button</h2>
 							<h6 class="section-subtitle text-muted">Customise it for your Mintbase store and add to your website. 
@@ -167,8 +167,8 @@
 										<div class="card-image">
 											 <!-- start tip button form -->  
 											<h6>Tip all minters at</h6>
-											<h2 class="distrotron-contract-firstname">cootest</h2>
-											<h6 class="distrotron-contract-restname">.mintspace2.testnet</h6>
+											<h2 class="distrotron-contract-firstname">50mint</h2>
+											<h6 class="distrotron-contract-restname">.mintspace1.near</h6>
 										 
 												<form id="tip-button" class="tip-button">
 													<fieldset>
@@ -197,7 +197,7 @@
 								</div>
 							</div>
 						</div>
-						<!- end card>
+						<!-- end card -->
 						<div class="col-12 col-md-6 col-lg-3 stretch-card2">
 							<div class="card color-cards">
 								<div class="card-body p-0">
@@ -205,8 +205,8 @@
 										<div class="card-image">
 											 <!-- start tip button form -->  
 							<h6>Tip all minters at</h6>
-							<h2 class="distrotron-contract-firstname">cootest</h2>
-							<h6 class="distrotron-contract-restname">.mintspace2.testnet</h6>
+							<h2 class="distrotron-contract-firstname">50mint</h2>
+							<h6 class="distrotron-contract-restname">.mintspace1.near</h6>
 						 
 								<form id="tip-button" class="tip-button">
 									<fieldset>
@@ -236,7 +236,7 @@
 								</div>
 							</div>
 						</div>
-						<!- end card>
+						<!-- end card -->
 						<div class="col-12 col-md-6 col-lg-3 stretch-card2">
 							<div class="card color-cards">
 								<div class="card-body p-0">
@@ -244,8 +244,8 @@
 										<div class="card-image">
 											 <!-- start tip button form -->  
 							<h6>Tip all minters at</h6>
-							<h2 class="distrotron-contract-firstname">cootest</h2>
-							<h6 class="distrotron-contract-restname">.mintspace2.testnet</h6>
+							<h2 class="distrotron-contract-firstname">50mint</h2>
+							<h6 class="distrotron-contract-restname">.mintspace1.near</h6>
 						 
 								<form id="tip-button" class="tip-button">
 									<fieldset>
@@ -274,7 +274,7 @@
 								</div>
 							</div>
 						</div>
-						<!- end card>
+						<!-- end card-->
 						<div class="col-12 col-md-6 col-lg-3 stretch-card2">
 							<div class="card color-cards">
 								<div class="card-body p-0">
@@ -282,8 +282,8 @@
 										<div class="card-image">
 											 <!-- start tip button form -->  
 							<h6>Tip all minters at</h6>
-							<h2 class="distrotron-contract-firstname">cootest</h2>
-							<h6 class="distrotron-contract-restname">.mintspace2.testnet</h6>
+							<h2 class="distrotron-contract-firstname">50mint</h2>
+							<h6 class="distrotron-contract-restname">.mintspace1.near</h6>
 						 
 								<form id="tip-button" class="tip-button">
 									<fieldset>
@@ -312,9 +312,12 @@
 								</div>
 							</div>
 						</div>
-						<!- end card>
+						<!-- end card-->
 					</div>
 				</div><!-- near-connected -->
+					<div class="text-center">
+						<p class="text-muted near-connected"><a class="otherNetworkLink"href="#">Switch to <span class="otherNetworkIdLabel"></span> demo.</span></a></p>
+					</div>
 			</section>    
 
 
@@ -414,11 +417,21 @@ Share revenues coming from sources other than NFT splits!  </p>
 		</div> 
 	</div>
 	<script src="vendors/jquery/jquery.min.js"></script>
-	<script src="vendors/bootstrap/bootstrap.min.js"></script>
+	<script src="vendors/bootstrap/bootstrap.min.js" type="module"></script>
 	<script src="vendors/owl-carousel/js/owl.carousel.min.js"></script>
 	<script src="vendors/aos/js/aos.js"></script>
 	<script src="js/landingpage.js"></script>
 	<script src="js/distrodemo.js"></script>
+	<script>
+	window.distrotron_config = {
+		networkDomain: "near.org",
+		networkId: "mainnet",
+		otherNetworkId: "testnet",
+		otherNetworkURL: "http://testnet.statelessart.org/cootoo.html",
+		distContractId: "distribundance.near"
+	};
+	</script>
 	<script src="https://cdn.jsdelivr.net/npm/near-api-js@1.1.0/dist/near-api-js.min.js"></script>
+
 </body>
 </html>

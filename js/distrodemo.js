@@ -50,6 +50,15 @@ window.onload = async function() {
 		distContractId: window.distrotron_config.distContractId || "distro_test.near", // a wild guess, probably wrong.
 	};
 
+		// did we get any overrides in the query string?
+	if ( (typeof URLSearchParams !== 'undefined')
+		&& (typeof location !== 'undefined')
+			&& (typeof location.search !== 'undefined') ) {
+	q = new URLSearchParams(location.search);
+	if (q.get('contract'))
+		window.distrotron_config.defaultMintbaseContractId = q.get('contract');
+	}
+
 	const LOTSAGAS = "300000000000000"; // ATM this is the max gas that can be attached to a transaction
 
 	///////////
